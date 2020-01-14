@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "mongoUrl": "mongodb://todo-mongo:27017/todo-app",
+  "redisUrl": "redis://todo-redis:6379"
+}

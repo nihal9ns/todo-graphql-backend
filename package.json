@@ -1,0 +1,51 @@
+{
+  "name": "todo-graphql-backend",
+  "version": "1.0.0",
+  "description": "GraphQL based backend for todo app powered by Express server",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest ./tests --runInBand",
+    "start:local": "npm run docker-up && node -r dotenv/config server.js dotenv_config_path=./env/local.env",
+    "start:stage": "node -r dotenv/config server.js dotenv_config_path=./env/stage.env",
+    "start:develop": "node -r dotenv/config server.js dotenv_config_path=./env/develop.env",
+    "start": "node -r dotenv/config server.js dotenv_config_path=./env/prod.env",
+    "docker-up": "docker-compose up -d",
+    "docker-down": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nihal9ns/todo-graphql-backend.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "GraphQL",
+    "Backend"
+  ],
+  "author": "Nihal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nihal9ns/todo-graphql-backend/issues"
+  },
+  "homepage": "https://github.com/nihal9ns/todo-graphql-backend#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-redis": "^4.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "express-session": "^1.17.0",
+    "graphql": "^14.5.8",
+    "graphql-errors": "^2.1.0",
+    "mongoose": "^5.7.3",
+    "morgan": "^1.9.1",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  }
+}

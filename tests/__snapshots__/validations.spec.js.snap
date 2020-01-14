@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TEST validations Should throw error if todo does not exist 1`] = `[Error: ToDo with id 5d99919960dd0d698dbe228c does not exist!]`;
